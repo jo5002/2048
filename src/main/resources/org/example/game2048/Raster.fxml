@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="700.0" style="-fx-background-color: #888888; -fx-background-radius: 20px;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.game2048.RasterController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Label fx:id="lbl1" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #888888; -fx-background-radius: 20px;">
+         <GridPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </GridPane.margin>
+         <font>
+            <Font name="MathJax_Math-BoldItalic" size="35.0" />
+         </font></Label>
+      <Label fx:id="lbl2" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #888888; -fx-background-radius: 20px;" GridPane.columnIndex="1">
+         <GridPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </GridPane.margin>
+         <font>
+            <Font name="MathJax_Math-BoldItalic" size="35.0" />
+         </font></Label>
+      <Label fx:id="lbl3" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #888888; -fx-background-radius: 20px;" GridPane.columnIndex="2">
+         <GridPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </GridPane.margin>
+         <font>
+            <Font name="MathJax_Math-BoldItalic" size="35.0" />
+         </font></Label>
+      <Label fx:id="lbl4" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #888888; -fx-background-radius: 20px;" textAlignment="CENTER" GridPane.columnIndex="3">
+         <GridPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </GridPane.margin>
+         <font>
+            <Font name="MathJax_Math-BoldItalic" size="35.0" />
+         </font></Label>
+      <Label fx:id="lbl5" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #888888; -fx-background-radius: 20px;" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </GridPane.margin>
+         <font>
+            <Font name="MathJax_Math-BoldItalic" size="35.0" />
+         </font></Label>
+      <Label fx:id="lbl6" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #888888; -fx-background-radius: 20px;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </GridPane.margin>
+         <font>
+            <Font name="MathJax_Math-BoldItalic" size="35.0" />
+         </font></Label>
+      <Label fx:id="lbl7" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #888888; -fx-background-radius: 20px;" GridPane.columnIndex="2" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </GridPane.margin>
+         <font>
+            <Font name="MathJax_Math-BoldItalic" size="35.0" />
+         </font></Label>
+      <Label fx:id="lbl8" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #888888; -fx-background-radius: 20px;" GridPane.columnIndex="3" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </GridPane.margin>
+         <font>
+            <Font name="MathJax_Math-BoldItalic" size="35.0" />
+         </font></Label>
+      <Label fx:id="lbl9" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #888888; -fx-background-radius: 20px;" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </GridPane.margin>
+         <font>
+            <Font name="MathJax_Math-BoldItalic" size="35.0" />
+         </font></Label>
+      <Label fx:id="lbl10" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #888888; -fx-background-radius: 20px;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </GridPane.margin>
+         <font>
+            <Font name="MathJax_Math-BoldItalic" size="35.0" />
+         </font></Label>
+      <Label fx:id="lbl11" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #888888; -fx-background-radius: 20px;" GridPane.columnIndex="2" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </GridPane.margin>
+         <font>
+            <Font name="MathJax_Math-BoldItalic" size="35.0" />
+         </font></Label>
+      <Label fx:id="lbl12" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #888888; -fx-background-radius: 20px;" GridPane.columnIndex="3" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </GridPane.margin>
+         <font>
+            <Font name="MathJax_Math-BoldItalic" size="35.0" />
+         </font></Label>
+      <Label fx:id="lbl13" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #888888; -fx-background-radius: 20px;" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </GridPane.margin>
+         <font>
+            <Font name="MathJax_Math-BoldItalic" size="35.0" />
+         </font></Label>
+      <Label fx:id="lbl14" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #888888; -fx-background-radius: 20px;" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </GridPane.margin>
+         <font>
+            <Font name="MathJax_Math-BoldItalic" size="35.0" />
+         </font></Label>
+      <Label fx:id="lbl15" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #888888; -fx-background-radius: 20px;" GridPane.columnIndex="2" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </GridPane.margin>
+         <font>
+            <Font name="MathJax_Math-BoldItalic" size="35.0" />
+         </font></Label>
+      <Label fx:id="lbl16" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #888888; -fx-background-radius: 20px;" GridPane.columnIndex="3" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </GridPane.margin>
+         <font>
+            <Font name="MathJax_Math-BoldItalic" size="35.0" />
+         </font></Label>
+
+   </children>
+</GridPane>
