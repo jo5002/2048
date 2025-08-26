@@ -189,6 +189,8 @@ function updateHTMLVonArray() {
 }
 
 //Event Listener
+const spielfeldHtml = document.querySelector('.spielfeld');
+
 document.addEventListener("keydown", (event) => {
     switch (event.key) {
         case "ArrowUp":
@@ -206,13 +208,15 @@ document.addEventListener("keydown", (event) => {
     }
 });
 
-document.addEventListener("touchstart", (e) => {
+spielfeldHtml.addEventListener("touchstart", (e) => {
+    e.preventDefault();
     const touch = e.touches[0];
     touchStartX = touch.clientX;
     touchStartY = touch.clientY;
-});
+}, { passive: false });
 
-document.addEventListener("touchend", (e) => {
+spielfeldHtml.addEventListener("touchend", (e) => {
+    e.preventDefault();
     const touch = e.changedTouches[0];
     const deltaX = touch.clientX - touchStartX;
     const deltaY = touch.clientY - touchStartY;
@@ -226,7 +230,7 @@ document.addEventListener("touchend", (e) => {
         if (deltaY > 30) onMoveInDirection(down);
         else if (deltaY < -30) onMoveInDirection(up);
     }
-});
+}, {passive: false});
 
 //Initialiserung
 felder = document.querySelectorAll('.feld');
