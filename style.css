@@ -4,6 +4,12 @@
     font-size: 3em;
 }
 
+.game-over {
+    text-align: center;
+    color: red;
+    font-size: 5em;
+}
+
 .info {
     display: flex;
 }

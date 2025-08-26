@@ -119,12 +119,60 @@ function combineInDirection(direction) {
     direction.forEach(line => collapseRow(line));
 }
 
+function isGameBoardFull() {
+    return spielfeld.every(feld => feld != 0);
+}
+
+function isMovePossible() {
+
+    for (let reihe = 0; reihe < 4; reihe++) {
+
+        //Felder in dieser Reihe
+        const erstesFeld = spielfeld[reihe * 4 + 0];
+        const zweitesFeld = spielfeld[reihe * 4 + 1];
+        const drittesFeld = spielfeld[reihe * 4 + 2];
+        const viertesFeld = spielfeld[reihe * 4 + 3];
+
+        if (erstesFeld == zweitesFeld || zweitesFeld == drittesFeld || drittesFeld == viertesFeld) {
+            return true;
+        }
+    }
+
+    for (let spalte = 0; spalte < 4; spalte++) {
+
+        //Felder in dieser Spalte
+        const erstesFeld = spielfeld[0 * 4 + spalte];
+        const zweitesFeld = spielfeld[1 * 4 + spalte];
+        const drittesFeld = spielfeld[2 * 4 + spalte];
+        const viertesFeld = spielfeld[3 * 4 + spalte];
+
+        if (erstesFeld == zweitesFeld || zweitesFeld == drittesFeld || drittesFeld == viertesFeld) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
 function onMoveInDirection(direction) {
+    let gameOver = false;
     pushInDirection(direction);
     combineInDirection(direction);
     pushInDirection(direction);
-    generate();
+
+    if(!isGameBoardFull()) {
+        generate();
+    }
+
+    if(isGameBoardFull() && !isMovePossible()) {
+        gameOver = true;
+    }
+
     updateHTMLVonArray();
+    if(gameOver) {
+        const gameOverDisplay = document.querySelector('.game-over');
+        gameOverDisplay.textContent = 'Game Over!';
+    }
 }
 
 function updateHTMLVonArray() {
