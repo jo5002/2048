@@ -1,7 +1,7 @@
 .ueberschrift {
     text-align: center;
     color: #5f5244;
-    font-size: 3em;
+    font-size: 4em;
 }
 
 .game-over {
@@ -10,22 +10,74 @@
     font-size: 5em;
 }
 
-.info {
+.score-container {
+    align-items: center;
     display: flex;
+    gap: 0.5em;
+}
+
+.score {
+    background-color: #bbada0;
+    border-radius: 0.5em;
+    padding: 0.5em;
+    display: flex;
+    flex-direction: column;
+    height: 2.3em;
+    min-width: 5em;
+}
+
+.score-number {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.score-text {
+    font-size: 1em;
+    text-align: center;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 420px) {
+    .header {
+        flex-direction: column;
+    }
+
+    .ueberschrift {
+        margin: 5px;
+    }
+
+    .score-container {
+        justify-content: space-evenly;
+        margin-bottom: 0.5em;
+    }
+
+    .score {
+        flex: 1;
+    }
+}
+
+.game-container {
+    max-width: 900px;
+    width: min(80vw, 60vh, 500px);
+    margin: 0 auto;
 }
 
 .spielfeld {
     display: grid;
-    max-width: 900px;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    gap: 10px;
+    gap: 2.5%;
     background-color: #877461;
-    padding: 0.5em;
-    width: min(80vw, 50vh, 900px); /* NEU: passt sich Bildschirm an */
-    border-radius: 0.5em;
+    padding: 2.5%;
+    border-radius: 0.9em;
     margin-left: auto;
     margin-right: auto;
+    aspect-ratio: 1;
 }
 
 .feld {
@@ -35,24 +87,66 @@
     text-align: center;
     align-content: center;
     aspect-ratio: 1 / 1;
-    min-width: 2em;
 }
 
-.feld-0    { background-color: rgb(157, 138, 119); }
+.feld-0 {
+    background-color: rgb(157, 138, 119);
+}
 
-.feld-2    { background-color: #eee4da; color: #776e65; }
-.feld-4    { background-color: #ede0c8; color: #776e65; }
-.feld-8    { background-color: #f2b179; color: #f9f6f2; }
-.feld-16   { background-color: #f59563; color: #f9f6f2; }
-.feld-32   { background-color: #f67c5f; color: #f9f6f2; }
-.feld-64   { background-color: #f65e3b; color: #f9f6f2; }
+.feld-2 {
+    background-color: #eee4da;
+    color: #776e65;
+}
 
-.feld-128  { background-color: #edcf72; color: #f9f6f2; }
-.feld-256  { background-color: #edcc61; color: #f9f6f2; }
-.feld-512  { background-color: #edc850; color: #f9f6f2; }
+.feld-4 {
+    background-color: #ede0c8;
+    color: #776e65;
+}
 
-.feld-1024 { background-color: #edc53f; color: #f9f6f2; }
-.feld-2048 { background-color: #edc22e; color: #f9f6f2; }
+.feld-8 {
+    background-color: #f2b179;
+    color: #f9f6f2;
+}
+
+.feld-16 {
+    background-color: #f59563;
+    color: #f9f6f2;
+}
+
+.feld-32 {
+    background-color: #f67c5f;
+    color: #f9f6f2;
+}
+
+.feld-64 {
+    background-color: #f65e3b;
+    color: #f9f6f2;
+}
+
+.feld-128 {
+    background-color: #edcf72;
+    color: #f9f6f2;
+}
+
+.feld-256 {
+    background-color: #edcc61;
+    color: #f9f6f2;
+}
+
+.feld-512 {
+    background-color: #edc850;
+    color: #f9f6f2;
+}
+
+.feld-1024 {
+    background-color: #edc53f;
+    color: #f9f6f2;
+}
+
+.feld-2048 {
+    background-color: #edc22e;
+    color: #f9f6f2;
+}
 
 button {
     background-color: #5f5244;

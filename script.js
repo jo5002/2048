@@ -34,8 +34,13 @@ const up = [
     [15, 11, 7, 3]
 ];
 
+const BEST_POINTS_KEY = 'BEST_POINTS';
+
 let touchStartX = 0;
 let touchStartY = 0;
+
+let points = 0;
+let bestPoints = 0;
 
 //Funktionen
 function getRandomInt(min, max) {
@@ -62,6 +67,16 @@ function getRandomFreeFieldIndex() {
     return fieldIndex;
 }
 
+function addPoints(pointsToAdd) {
+    points += pointsToAdd;
+    curScore.textContent = points;
+    if(points > bestPoints) {
+        bestPoints = points;
+        localStorage.setItem(BEST_POINTS_KEY, bestPoints);
+        bestScore.textContent = bestPoints;
+    }
+}
+
 function generate() {
     const fieldIndex = getRandomFreeFieldIndex();
     const startNumber = getRandomStartNumber();
@@ -69,9 +84,15 @@ function generate() {
 }
 
 function processFields(firstIndex, secoundIndex) {
-    if (spielfeld[firstIndex] == spielfeld[secoundIndex] && spielfeld[secoundIndex] > 0) {
 
-        spielfeld[firstIndex] = spielfeld[firstIndex] * 2;
+    const firstValue = spielfeld[firstIndex];
+    const secoundValue = spielfeld[secoundIndex];
+
+    if (firstValue == secoundValue && secoundValue > 0) {
+
+        const newValue = firstValue + secoundValue;
+        addPoints(newValue);
+        spielfeld[firstIndex] = newValue;
         spielfeld[secoundIndex] = 0;
 
         return true;
@@ -190,6 +211,8 @@ function updateHTMLVonArray() {
 
 //Event Listener
 const spielfeldHtml = document.querySelector('.spielfeld');
+const curScore = document.getElementById('curScore');
+const bestScore = document.getElementById('bestScore');
 
 document.addEventListener("keydown", (event) => {
     switch (event.key) {
@@ -234,6 +257,11 @@ spielfeldHtml.addEventListener("touchend", (e) => {
 
 //Initialiserung
 felder = document.querySelectorAll('.feld');
+bestPoints = localStorage.getItem(BEST_POINTS_KEY);
+
+curScore.textContent = points;
+bestScore.textContent = bestPoints;
+
 generate();
 generate();
 updateHTMLVonArray();
